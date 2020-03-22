@@ -1,0 +1,21 @@
+<nz-table #table [nzData]="rooms">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Description</th>
+        <th>Available Right Now</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of table.data">
+            <td>{{room.id}}</td>
+            <td>{{room.title}}</td>
+            <td>{{room.location}}</td>
+            <td>{{room.description}}</td>
+            <td>{{room.available}}</td>
+            <!-- <td>
+                <a [routerLink]="['/home', 'category', category.id]">Edit</a>
+            </td> -->
+        </tr>
+    </tbody>
+</nz-table>

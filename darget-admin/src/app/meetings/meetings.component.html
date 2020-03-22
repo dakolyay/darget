@@ -1,0 +1,15 @@
+<nz-table #table [nzData]="meetings">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let meeting of table.data">
+            <td>{{meeting.id}}</td>
+            <td>{{meeting.title}}</td>
+            <!-- <td>
+                <a [routerLink]="['/home', 'category', category.id]">Edit</a>
+            </td> -->
+        </tr>
+    </tbody>
+</nz-table>
