@@ -16,7 +16,21 @@ export class RoomsService {
         return this.roomRepository.find();
     }
 
+    getById(id: number) {
+        return this.roomRepository.findOne(id);
+    }
+
     createRoom(room: Room) {
         return this.roomRepository.save(room);
     }
+
+    updateRoom(id: number, data: Partial<Room>) {
+        return this.roomRepository.update(id,data);
+    }
+
+    deleteRoom(id: number) {
+        return this.roomRepository.delete(id);
+    }
+
+
 }

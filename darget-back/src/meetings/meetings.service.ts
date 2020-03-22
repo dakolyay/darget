@@ -16,7 +16,19 @@ export class MeetingsService {
         return this.meetingRepository.find();
     }
 
+    getById(id: number) {
+        return this.meetingRepository.findOne(id);
+    }
+
     createMeeting(meeting: Meeting) {
         return this.meetingRepository.save(meeting);
+    }
+
+    updateMeeting(id: number, data: Partial<Meeting>) {
+        return this.meetingRepository.update(id,data);
+    }
+
+    deleteMeeting(id: number){
+        return this.meetingRepository.delete(id);
     }
 }

@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from "@nestjs/common";
+import { Controller, Get, Post, Body, Param, Delete } from "@nestjs/common";
 
 import {MeetingsService} from './meetings.service';
 
@@ -11,9 +11,24 @@ export class MeetingsController {
         return this.meetingsService.getAll();
     }
 
+    @Get(':id')
+    getOne(@Param('id') id: number) {
+        return this.meetingsService.getById(id);
+    }
+
     @Post()
-    createMeeting(@Body() meeting) {
+    addMeeting(@Body() meeting) {
         return this.meetingsService.createMeeting(meeting);
+    }
+
+    @Post(':id')
+    editMeeting(@Param('id') id: number, @Body() data) {
+        return this.meetingsService.updateMeeting(id, data);
+    }
+
+    @Delete(':id')
+    deleteMeeting(@Param('id') id: number) {
+        return this.meetingsService.deleteMeeting(id);
     }
 
 }

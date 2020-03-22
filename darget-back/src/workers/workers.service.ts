@@ -16,7 +16,20 @@ export class WorkersService {
         return this.workerRepository.find();
     }
 
+    getById(id: number) {
+        return this.workerRepository.findOne(id);
+    }
+
     addWorker(worker: Worker) {
         return this.workerRepository.save(worker);
     }
+
+    updateWorker(id: number, data: Partial<Worker>) {
+        return this.workerRepository.update(id,data);
+    }
+
+    deleteWorker(id: number) {
+        return this.workerRepository.delete(id);
+    }
+
 }

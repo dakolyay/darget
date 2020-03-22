@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body } from "@nestjs/common";
+import { Controller, Get, Post, Body, Param, Delete } from "@nestjs/common";
 
 import {WorkersService} from './workers.service';
 
-@Controller('rooms')
+@Controller('workers')
 export class WorkersController {
     constructor( private readonly workersService: WorkersService){}
     
@@ -16,4 +16,18 @@ export class WorkersController {
         return this.workersService.addWorker(worker);
     }
 
+    @Get(':id')
+    getOne(@Param('id') id: number) {
+        return this.workersService.getById(id);
+    }
+
+    @Post(':id')
+    editWorker(@Param('id') id: number, @Body() data) {
+        return this.workersService.updateWorker(id,data);
+    }
+
+    @Delete(':id')
+    deleteWorker(@Param('id') id: number) {
+        return this.workersService.deleteWorker(id);
+    }
 }

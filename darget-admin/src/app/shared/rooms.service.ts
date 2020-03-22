@@ -19,4 +19,11 @@ export class RoomsService {
         return this.httpClient.get<Room[]>(`${this.host}/rooms`);
     }
 
+    getById(id: number) {
+        return this.httpClient.get<Room>(`${this.host}/rooms/${id}`);
+    }
+
+    update(room: Room) {
+        return this.httpClient.put<any>(`${this.host}/rooms/${room.id}`, room);
+    }
 }

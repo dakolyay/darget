@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { MeetingsComponent } from './meetings/meetings.component';
+import { RoomComponent } from './room/room.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { MeetingsComponent } from './meetings/meetings.component';
     HomeComponent,
     RoomsComponent,
     MeetingsComponent,
+    RoomComponent,
+    MeetingComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+<a nz-button nzType="primary" routerLink ="/home/room">Create room</a>
 <nz-table #table [nzData]="rooms">
     <thead>
         <th>ID</th>
@@ -13,9 +14,23 @@
             <td>{{room.location}}</td>
             <td>{{room.description}}</td>
             <td>{{room.available}}</td>
-            <!-- <td>
-                <a [routerLink]="['/home', 'category', category.id]">Edit</a>
-            </td> -->
+            <td>
+                <a [routerLink]="['/home', 'room', room.id]">Edit</a>
+            </td>
         </tr>
     </tbody>
 </nz-table>
+<!-- <nz-table #table [nzData]="rooms">
+    <nz-row>
+        <nz-col *ngFor="let room of table.data">
+            <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+                <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com">
+                    <a>{{room.id}}</a>
+                </nz-card-meta>
+              </nz-card>
+              <ng-template #coverTemplate>
+                <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+              </ng-template>
+        </nz-col>
+    </nz-row>
+</nz-table> -->
