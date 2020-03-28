@@ -12,6 +12,8 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { RoomComponent } from './room/room.component';
 import { MeetingComponent } from './meeting/meeting.component';
+import { WorkersComponent } from './workers/workers.component';
+import { WorkerComponent } from './worker/worker.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { MeetingComponent } from './meeting/meeting.component';
     MeetingsComponent,
     RoomComponent,
     MeetingComponent,
+    WorkersComponent,
+    WorkerComponent,
   ],
   imports: [
     BrowserModule,

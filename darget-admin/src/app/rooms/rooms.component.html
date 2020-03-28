@@ -1,10 +1,8 @@
-<a nz-button nzType="primary" routerLink ="/home/room">Create room</a>
 <nz-table #table [nzData]="rooms">
     <thead>
         <th>ID</th>
         <th>Name</th>
         <th>Location</th>
-        <th>Description</th>
         <th>Available Right Now</th>
     </thead>
     <tbody>
@@ -12,7 +10,6 @@
             <td>{{room.id}}</td>
             <td>{{room.title}}</td>
             <td>{{room.location}}</td>
-            <td>{{room.description}}</td>
             <td>{{room.available}}</td>
             <td>
                 <a [routerLink]="['/home', 'room', room.id]">Edit</a>
@@ -20,6 +17,7 @@
         </tr>
     </tbody>
 </nz-table>
+<a nz-button nzType="primary" routerLink ="/home/room">Create room</a>
 <!-- <nz-table #table [nzData]="rooms">
     <nz-row>
         <nz-col *ngFor="let room of table.data">

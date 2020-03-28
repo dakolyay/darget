@@ -6,6 +6,8 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { RoomComponent } from './room/room.component';
 import {MeetingComponent} from './meeting/meeting.component';
+import { WorkersComponent } from './workers/workers.component';
+import { WorkerComponent } from './worker/worker.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,10 @@ const routes: Routes = [
             component: MeetingsComponent,
           },
           {
+            path: 'workers',
+            component: WorkersComponent,
+          },
+          {
             path: 'room',
             component: RoomComponent,
           },
@@ -38,7 +44,15 @@ const routes: Routes = [
           {
             path: 'meeting/:id',
             component: MeetingComponent,
-          }
+          },
+          {
+            path: 'worker',
+            component: WorkerComponent,
+          },
+          {
+            path: 'worker/:id',
+            component: WorkerComponent,
+          },
         ]
       }
     ]
