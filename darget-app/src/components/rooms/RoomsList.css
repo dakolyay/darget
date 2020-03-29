@@ -1,0 +1,43 @@
+.PostsList_list {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
+.Post_item {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.Post_item-title {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.Post_item-text {
+    color: darkgrey;
+    font-size: 0.875rem;
+}
+
+.Post_item-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Post_item-buttons button {
+    background-color: blue;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 300ms ease-out;
+}
+
+.Post_item-buttons button.liked {
+    background-color: tomato;
+}
