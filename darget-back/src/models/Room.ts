@@ -20,5 +20,6 @@ export class Room {
     available: boolean;
 
     @Column()
-    imageURL: string;
+    imageUrl: string;
+
 }

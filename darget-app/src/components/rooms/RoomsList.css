@@ -41,3 +41,12 @@
 .Post_item-buttons button.liked {
     background-color: tomato;
 }
+
+.site-card-wrapper {
+    background: #ececec;
+    padding: 30px;
+  }
+
+  .reserve-button {
+    padding-top: 1.rem;
+  }

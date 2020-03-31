@@ -14,22 +14,6 @@ const rooms = [
         id: 3,
         name:"Third",
     },
-    {
-        id: 2,
-        name: "Second",
-    },
-    {
-        id: 3,
-        name:"Third",
-    },
-    {
-        id: 2,
-        name: "Second",
-    },
-    {
-        id: 3,
-        name:"Third",
-    },
 ];
 
 class Mainpage extends Component {

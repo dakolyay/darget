@@ -4,16 +4,16 @@ import 'antd/dist/antd.css';
 
 
 
-class Header extends Component {
+class Footer extends Component {
 
     render() {
         return (
 
             <div>
                 <Layout>
-                <Layout.Header>
+                <Layout.Footer>
                     hello
-                </Layout.Header>
+                </Layout.Footer>
     
                 </Layout>
 
@@ -22,4 +22,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Footer;

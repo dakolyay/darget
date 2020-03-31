@@ -6,14 +6,9 @@ import store from './store';
 import './App.css';
 import Mainpage from './components/mainpage/Main';
 
-// import Header from '../src/components/header/header'
-// import Footer from '../src/components/footer/footer'
-// import Category from '../src/components/category/category'
-// import Article from '../src/components/article/article'
-// import Mainpage from './components/mainpage/main'
-// import Registration from './components/registration/registration'
-// import Login from './components/login/login'
-// import articleCreate from './components/artclecreate/articleCreate'
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Room from './components/rooms/Room';
 
 class App extends Component {
   render() {
@@ -21,9 +16,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
             <div className="App">
-                {/* <Header/> */}
+                <Header/>
                 <Route path="/" exact component={Mainpage}></Route>
-                {/* <Footer/> */}
+                <Route path="/:room_id" exact component={Room}></Route>
+                <Footer/>
             </div>
         </Router>
       </Provider>
